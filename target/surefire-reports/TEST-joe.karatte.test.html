@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>joe/karatte/test.feature</title>
+</head>
+<body>
+<div>
+<div>Verify the map</div>
+<div>
+<div>url 'http://maps.googleapis.com/maps/api/geocode/xml' passed</div>
+<div>params (address:  '90 Rivonia Rd, Sandton, Johannesburg,2196') failed</div>
+<div>method get skipped</div>
+<div>status 200 skipped</div>
+<div>match response.GeocodeResponse.status contains 'OK' skipped</div>
+</div>
+</div>
+<div>
+<div>Verify the map</div>
+<div>
+<div>url 'http://restapi.demoqa.com/utilities/weather/city/' passed</div>
+<div>params City: 'Johannesburg' failed</div>
+<div>method get skipped</div>
+<div>status 200 skipped</div>
+<div>match $ == {City:"Johannesburg"} skipped</div>
+</div>
+</div>
+<div>
+<div>Verify the ilab</div>
+<div>
+<div>url 'https://www.ilabquality.com/' passed</div>
+<div>method get passed</div>
+<div>status 200 passed</div>
+<div>match $ contains {id:"accreditation course today"} failed</div>
+</div>
+</div>
+</body>
+</html>
