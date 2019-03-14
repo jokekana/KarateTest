@@ -9,7 +9,7 @@
 <div>Verify the map</div>
 <div>
 <div>url 'http://maps.googleapis.com/maps/api/geocode/xml' passed</div>
-<div>params (address:  '90 Rivonia Rd, Sandton, Johannesburg,2196') failed</div>
+<div>param (address: '90 Rivonia Rd, Johannesburg, 2196, South Africa') undefined</div>
 <div>method get skipped</div>
 <div>status 200 skipped</div>
 <div>match response.GeocodeResponse.status contains 'OK' skipped</div>
@@ -18,11 +18,59 @@
 <div>
 <div>Verify the map</div>
 <div>
-<div>url 'http://restapi.demoqa.com/utilities/weather/city/' passed</div>
-<div>params City: 'Johannesburg' failed</div>
+<div>url 'http://maps.googleapis.com/maps/api/geocode/xml' passed</div>
+<div>param (address:  '676767jhjhjhkhj,878787878') undefined</div>
 <div>method get skipped</div>
 <div>status 200 skipped</div>
-<div>match $ == {City:"Johannesburg"} skipped</div>
+<div>match response.GeocodeResponse.status contains 'OK' skipped</div>
+</div>
+</div>
+<div>
+<div>Verify the weather (1)</div>
+<div>
+<div>url 'http://restapi.demoqa.com/utilities/weather/city' passed</div>
+<div>param City =  '/Johannesburg' passed</div>
+<div>method get passed</div>
+<div>status 200 passed</div>
+<div>match $.City == "Johannesburg" failed</div>
+</div>
+</div>
+<div>
+<div>Verify the weather (2)</div>
+<div>
+<div>url 'http://restapi.demoqa.com/utilities/weather/city' passed</div>
+<div>param City =  '/Pretoria' passed</div>
+<div>method get passed</div>
+<div>status 200 passed</div>
+<div>match $.City == 'Pretoria failed</div>
+</div>
+</div>
+<div>
+<div>Verify the weather (3)</div>
+<div>
+<div>url 'http://restapi.demoqa.com/utilities/weather/city' passed</div>
+<div>param City =  '/' passed</div>
+<div>method get passed</div>
+<div>status 200 passed</div>
+<div>match $.City == '#notnull' passed</div>
+</div>
+</div>
+<div>
+<div>Verify the weather for Polokwane</div>
+<div>
+<div>url 'http://restapi.demoqa.com/utilities/weather/city/Johannesburg' passed</div>
+<div>method get passed</div>
+<div>status 200 passed</div>
+<div>match $.City == "Johannesburg" passed</div>
+</div>
+</div>
+<div>
+<div>Verify the weather for Pretoria</div>
+<div>
+<div>url 'http://restapi.demoqa.com/utilities/weather/city/Pretoria' passed</div>
+<div>method get passed</div>
+<div>status 200 passed</div>
+<div>match $ contains {City:"Pretoria"} passed</div>
 </div>
 </div>
 <div>
@@ -31,7 +79,6 @@
 <div>url 'https://www.ilabquality.com/' passed</div>
 <div>method get passed</div>
 <div>status 200 passed</div>
-<div>match $ contains {id:"accreditation course today"} failed</div>
 </div>
 </div>
 </body>
